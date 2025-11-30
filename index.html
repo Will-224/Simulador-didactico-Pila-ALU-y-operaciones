@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estylePila.css">
+
+    <title>Proyecto de sergio</title>
+</head>
+<body>
+
+    <main>
+
+        <section>
+            <h1>Pila (Stack)</h1>
+            
+            <!-- Div donde se mostrará la pila -->
+            <div id="divPila"></div> 
+
+            <!-- Área de texto para ingresar elementos -->
+            <textarea id="txtPush" cols="15" rows="1"></textarea>
+            
+            <!-- Botones para las operaciones de la pila -->
+            <button id="btnPush">Push</button>
+            <button id="btnPop">Pop</button>
+        </section>
+
+
+        <section>
+            <h2>Operaciones</h2>
+
+            <h3>Aritméticas:</h3>
+            <button id="btnSuma">+</button>
+            <button id="btnResta">-</button>
+            <button id="btnMultiplicacion">×</button>
+            <button id="btnDivision">÷</button>
+            
+            <h3>Lógicas:</h3>
+            <button id="btnAnd">AND</button>
+            <button id="btnOr">OR</button>
+            <button id="btnXor">XOR</button>
+            <button id="btnNot">NOT</button>
+        </section>
+
+
+        <section>
+            <h2>ALU (Unidad Aritmético-Lógica)</h2>
+            
+            <p>Operando A: <span id="opA">-</span></p>
+            <p>Operando B: <span id="opB">-</span></p>
+            <p>Operación: <span id="operacion">-</span></p>
+            <p>Resultado: <span id="resultado">-</span></p>
+            <p>Código Op: <span id="codigoOp">-</span></p>
+        </section>
+
+    </main>
+
+    <!-- Script al FINAL, antes de cerrar body -->
+    <script src="jsPila.js"></script>
+    
+</body>
+</html>

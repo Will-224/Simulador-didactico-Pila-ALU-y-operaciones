@@ -1,0 +1,138 @@
+/* =========================================
+   1. Estilos Generales y Reseteo
+   ========================================= */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; 
+    color: #333; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+h1 {
+    color: #1a535c; 
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4ecdc4; 
+    padding-bottom: 10px;
+}
+
+main {
+    background-color: #ffffff; 
+    padding: 40px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 500px; 
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+/* =========================================
+   2. Estilos del Área de Ingreso y Botones
+   ========================================= */
+
+#txtPush {
+    width: calc(100% - 160px); 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    resize: none; 
+}
+
+#txtPush:focus {
+    border-color: #4ecdc4;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-left: 10px;
+}
+
+#btnPush {
+    background-color: #4ecdc4; 
+    color: white;
+}
+
+#btnPush:hover {
+    background-color: #3aa89f;
+}
+
+#btnPop {
+    background-color: #ff6b6b; 
+    color: white;
+}
+
+#btnPop:hover {
+    background-color: #ff4747;
+}
+
+/* =========================================
+   3. Estilos de la Pila (Stack)
+   ========================================= */
+
+#divPila {
+    /* *** CAMBIOS CLAVE PARA RESPONSIVIDAD ***
+    1. Se elimina 'min-height: 300px;' para que el contenedor
+       se ajuste a la altura del contenido.
+    2. Se añade una altura mínima baja para que el borde se vea
+       cuando la pila está vacía, pero la altura principal la dará el contenido. 
+    */
+    height: auto; /* La altura se ajusta al contenido */
+    min-height: 50px; /* Altura mínima para mostrar el contenedor vacío */
+
+    width: 90%; 
+    margin: 20px auto; 
+    border: 3px solid #1a535c;
+    background-color: #e0fafa; 
+    padding: 15px;
+    border-radius: 10px;
+    
+    /* Configuración clave para la pila */
+    display: flex;
+    flex-direction: column-reverse; /* Hace que los nuevos ítems aparezcan abajo, simulando que la pila crece hacia arriba */
+    gap: 8px;
+    align-items: center; 
+}
+
+.elemento-pila {
+    /* Estilo para cada elemento apilado */
+    width: 90%; 
+    background-color: #6495ED; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+    
+    /* Pequeña transformación para dar un efecto 3D sutil de apilamiento */
+    transform: perspective(1px) translateZ(0); 
+    z-index: 10;
+}
+
+/* Estilo para el mensaje de pila vacía */
+.vacia {
+    color: #999;
+    font-style: italic;
+    font-size: 16px;
+    /* Ajusta la posición del texto "Pila vacía" */
+    margin: auto; 
+    text-align: center;
+}
