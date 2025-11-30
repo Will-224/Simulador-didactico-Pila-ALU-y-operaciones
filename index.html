@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estylePila.css">
-
-    <title>Proyecto de sergio</title>
+    <title>Simulador de Pila - Proyecto de Sergio</title>
 </head>
 <body>
 
     <main>
 
+        <!-- Sección Principal: Pila -->
         <section>
             <h1>Pila (Stack)</h1>
             
@@ -18,39 +18,50 @@
             <div id="divPila"></div> 
 
             <!-- Área de texto para ingresar elementos -->
-            <textarea id="txtPush" cols="15" rows="1"></textarea>
+            <textarea id="txtPush" cols="15" rows="1" placeholder="Ingrese un número"></textarea>
             
-            <!-- Botones para las operaciones de la pila -->
+            <!-- Botones para las operaciones básicas de la pila -->
             <button id="btnPush">Push</button>
             <button id="btnPop">Pop</button>
         </section>
 
 
+        <!-- Sección de Operaciones -->
         <section>
             <h2>Operaciones</h2>
 
             <h3>Aritméticas:</h3>
-            <button id="btnSuma">+</button>
-            <button id="btnResta">-</button>
-            <button id="btnMultiplicacion">×</button>
-            <button id="btnDivision">÷</button>
+            <div class="button-group">
+                <button id="btnSuma" class="btn-aritmetica">+</button>
+                <button id="btnResta" class="btn-aritmetica">-</button>
+                <button id="btnMultiplicacion" class="btn-aritmetica">×</button>
+                <button id="btnDivision" class="btn-aritmetica">÷</button>
+            </div>
             
             <h3>Lógicas:</h3>
-            <button id="btnAnd">AND</button>
-            <button id="btnOr">OR</button>
-            <button id="btnXor">XOR</button>
-            <button id="btnNot">NOT</button>
+            <div class="button-group">
+                <button id="btnAnd" class="btn-logica">AND</button>
+                <button id="btnOr" class="btn-logica">OR</button>
+                <button id="btnXor" class="btn-logica">XOR</button>
+                <button id="btnNot" class="btn-logica">NOT</button>
+            </div>
+
+            <h3>Subrutinas:</h3>
+            <div class="button-group">
+                <button id="btnClear" class="btn-subrutina">CLEAR</button>
+                <button id="btnDup" class="btn-subrutina">DUP</button>
+                <button id="btnSwap" class="btn-subrutina">SWAP</button>
+            </div>
         </section>
 
 
+        <!-- Sección de Historial -->
         <section>
-            <h2>ALU (Unidad Aritmético-Lógica)</h2>
+            <h2>Historial de Operaciones</h2>
             
-            <p>Operando A: <span id="opA">-</span></p>
-            <p>Operando B: <span id="opB">-</span></p>
-            <p>Operación: <span id="operacion">-</span></p>
-            <p>Resultado: <span id="resultado">-</span></p>
-            <p>Código Op: <span id="codigoOp">-</span></p>
+            <div id="divHistorial" class="historial-container">
+                <p class="historial-vacio">Sin operaciones realizadas</p>
+            </div>
         </section>
 
     </main>
